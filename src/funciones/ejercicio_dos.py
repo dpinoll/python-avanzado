@@ -1,0 +1,1 @@
+# crear un programa asigne un puntaje a cada letra del abecedariovy que una funcion me permita saber la letra que tenga menor puntaje y mayor puntaje y la media
