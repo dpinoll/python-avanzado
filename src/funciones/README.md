@@ -138,8 +138,30 @@ def resta(a,b):
     """
     return a-b
 ```
-> [!WARNING] en el proceso de documentacion tener en cuenta de incluir a lo menos lo siguiente: 
+[!WARNING] en el proceso de documentacion tener en cuenta de incluir a lo menos lo siguiente: 
 > 1. breve explicacion sobre que hace la funcion 
 > 2. especificaciones y  caracterosticas de los parametros incluyendo sus tipos. 
 > 3. restricciones de la funcion. 
 > 4. el valor que retorna y sus caracteristicas 
+
+## type-hints (anotaciones de tipo)
+Nos permite indicar que tipo de datos recibira una variable, parametros y el valor que retorna de una funcion.
+Para utilizarlos debemos indicar el tipo de dato despues del separador`:` en el caso del valor de retorno usaremos `->` luego el tipo de dato y finalmente el separador `:` que indica el inicio del bloque de codigo de la funcion.
+Las anotaciones de tipo son una herramienta que nos permite complementar la documentacion de nuestro codigo
+**tenemos lo siguiente**
+- **Simple**
+  - int -> numeros enteros
+  - float -> numeros decimales 
+  - bool -> datos boleanos(verdad o falso)
+  - str -> datos de tipo texto o cadena
+  - list -> listas `[]`
+  - tuple -> tuplas `()`
+  - dict -> diccionarios `{}`
+- **compuestos**
+  existen casos en los que nesecitamos mas expresividad en la
+  *anotacion de tipos* ¿que ocurre si queremos indicar una *lista de cadenas* o un *conjunto de enteros*.?
+  - list[str] -> lista de cadenas de texto
+  - list[int] -> lista de numeros enteros
+  - dict[str,float] -> diccionario donde las claves son cadenas de texto y los valores son flotantes*decimales
+- **Multiles**
+  
