@@ -164,4 +164,15 @@ Las anotaciones de tipo son una herramienta que nos permite complementar la docu
   - list[int] -> lista de numeros enteros
   - dict[str,float] -> diccionario donde las claves son cadenas de texto y los valores son flotantes*decimales
 - **Multiles**
-  
+  En el caso que queramos indicar un determinado parametro puede ser de un `tipo o de otro` tenemos que especificarlo el operador `|`
+  - tuple/dict -> puede ser de tipo tupla o diccionario
+  - list[str|int] -> lista cuyos elementos pueden ser cadena de texto o enteros 
+  - dict[str|int,float|int] ->
+## closure
+una closure o `clausura` sin funciones que establecen una funcion interior, o retornan una funcion, estas funciones se caracterisan por recrear el valor de los argumentos que se le pasa.
+```python
+def multiplicacion(n):
+    def multiplicacion(m):
+        return n*m
+    return multiplicacion
+```
