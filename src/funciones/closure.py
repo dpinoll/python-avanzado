@@ -14,5 +14,5 @@ def multiplicador(factor:int):
     return multiplicar
 por_dos = multiplicador(2)
 por_tres = multiplicador(3) 
-print(por_dos(5))  # Salida: 10
-print(por_tres(5))  # Salida: 15
+print(por_dos(5))  
+print(por_tres(5))  

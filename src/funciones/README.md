@@ -176,3 +176,32 @@ def multiplicacion(n):
         return n*m
     return multiplicacion
 ```
+## programacion funcional 
+python es un leguaje de programacion multiparadigma, y uno de sus paradigmas que mejor funcion tienen es la `funcional`.
+python usa tres`map()`,`filter()`,`reduce()`,pero nosotros solo usamos `map(),filter()`.
+estas funciones integradas de python sirven para procesar y transformar colecciones de datos(listas,diccionarios) de manera muy eficiente y segunda el iterable en que va acutuar. la funcion que recibe como parametro puede ser normal `def` o puede ser anonima `lambda`. 
+
+> [!tip]importante:
+> las funciones `map()` y `filter()` reciben dos parametros primero la funcion a ejecutar 
+### 1. map()
+map aplica una funcion especifica a cada uno de los elementos de una coleccion y devuelve un nuevo iterable con los resultados
+```python
+# de una lista de numeros deseamos calcular la potencia de cada numero 
+numeros:list[int]=[2,4,6,8,7]
+## cuando deseamos trabajar con una funcion anonima tenemos que declarar primero la funcion antes de pasarla por parametro
+def f(x):
+    return x**2
+## una vez creada pasamos la funcion como parametro
+map(f, numeros)
+## cuando deseamos trabajar con funcion anonimas usamos lambda dentro del parametro
+map(lambda x:x**2, numeros)
+```
+### 2. filter()
+filter pasa cada elemento de una coleccion por una funcion y solo se queda con aquellos elementos donde la funcion devuelva true (es decir filtra los datos segun una condicion).
+```python
+# imagina que tienes una lista de numeros y solo quieres quedarte con los numeros pares
+numeros:list[int]=[2,7,8,20,4,3,9,12,11,16,17]
+filter(lambda n:n % 2 ==0, numeros)
+```
+> [!WARNING]Nota importante
+> tanto `map()` coomo `filter()` no devuleven listas directamente, sino iteradores. esto es para ahorrar memoria(evaluacion perezosa o lazy evaluacion). si quieres ver el resultado como una lista tradicional, siempre debes envolver en `list()`.
