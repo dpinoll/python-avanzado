@@ -1,5 +1,5 @@
 # funciones en python
-las funciones no permiten ordenar mejor el codigo y reutilizarlo cuando sea necesario.
+las funciones nos permiten ordenar mejor el codigo y reutilizarlo cuando sea necesario.
 ```python
 # ejemplo deseamos crear un programa en python que nos permite sumar dos numeros
 numero_uno:int=45

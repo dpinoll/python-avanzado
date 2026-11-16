@@ -15,4 +15,5 @@ def multiplicador(factor:int):
 por_dos = multiplicador(2)
 por_tres = multiplicador(3) 
 print(por_dos(5))  
-print(por_tres(5))  
+print(por_tres(5))
+
