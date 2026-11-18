@@ -205,3 +205,56 @@ filter(lambda n:n % 2 ==0, numeros)
 ```
 > [!WARNING]Nota importante
 > tanto `map()` coomo `filter()` no devuleven listas directamente, sino iteradores. esto es para ahorrar memoria(evaluacion perezosa o lazy evaluacion). si quieres ver el resultado como una lista tradicional, siempre debes envolver en `list()`.
+
+## comprension de lista
+1. Comprensión de Listas (List Comprehensions)
+La comprensión de listas te permite crear una lista nueva aplicando una operación o un filtro a los elementos de otra secuencia, de forma mucho más corta que usando un ciclo for tradicional.
+
+Estructura básica:
+Python
+nueva_lista = [expresion for elemento in iterable if condicion]
+expresion: Lo que quieres hacer con cada elemento (ej. multiplicarlo por 2).
+
+for elemento in iterable: El ciclo que recorre los elementos.
+
+if condicion (opcional): Un filtro para incluir solo los elementos que cumplan una regla.
+
+Ejemplo práctico:
+Imagina que quieres obtener los cuadrados de los números del 0 al 4:
+
+```Python
+# Forma tradicional con un ciclo for
+cuadrados = []
+for x in range(5):
+    cuadrados.append(x ** 2)
+
+# Forma elegante con comprensión de listas
+cuadrados = [x ** 2 for x in range(5)]
+print(cuadrados)  # Salida: [0, 1, 4, 9, 16]
+Ejemplo con filtro (if): solo los números pares del 0 al 9.
+```
+```Python
+pares = [x for x in range(10) if x % 2 == 0]
+print(pares)  # Salida: [0, 2, 4, 6, 8]}
+```
+## diccionarios por comprension
+2. Comprensión de Diccionarios (Dictionary Comprehensions)
+Funcionan exactamente igual que las listas, pero están diseñadas para crear diccionarios. Por eso, en lugar de una sola expresión, debes definir la clave y el valor separados por dos puntos (:).
+
+Estructura básica:
+```Python
+nuevo_diccionario = {clave: valor for elemento in iterable if condicion}
+Ejemplo práctico:
+Crear un diccionario donde las claves sean números del 1 al 4 y los valores sean esos números al cubo:
+```
+```Python
+cubos = {x: x ** 3 for x in range(1, 5)}
+print(cubos)  # Salida: {1: 1, 2: 8, 3: 27, 4: 64}
+También puedes transformar diccionarios existentes, por ejemplo, convirtiendo las calificaciones de un diccionario a mayúsculas o invirtiendo claves y valores:
+```
+```Python
+precios = {"manzana": 2, "pera": 3, "uva": 5}
+# Duplicar los precios
+precios_inflados = {k: v * 2 for k, v in precios.items()}
+print(precios_inflados)  # Salida: {'manzana': 4, 'pera': 6, 'uva': 10}
+```
